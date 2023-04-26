@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <title> home </title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #container > a {
+      border-radius: 15px;
+      text-decoration: none;
+      color: white;
+      background-color: green;
+      width: auto;
+      height: auto;
+      margin: 10px;
+      padding: 15px;
+      text-align: center;
+    }
+    h3 {
+      margin: 30px 10px 10px 10px;
+      text-align: center;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+<h1> Welcome To Home Page </h1>
+<h3> choose the service: </h3>
+<div id="container">
+  <a th:href="@{'/School/' + ${id} + '/marks' }" > view all marks </a>
+  <a th:href="@{'/School/' + ${id} + '/mark' }" > view single mark </a>
+  <a th:href="@{'/School/' + ${id} + '/average' }" > view course average </a>
+  <a th:href="@{'/School/' + ${id} + '/max' }" > view course max mark  </a>
+  <a th:href="@{'/School/' + ${id} + '/min' }"> view single min mark </a>
+  <a th:href="@{'/School/' + ${id} + '/median' }"> view median </a>
+</div>
+</body>
+</html>
